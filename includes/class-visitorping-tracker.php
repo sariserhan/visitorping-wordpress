@@ -79,10 +79,14 @@ class VisitorPing_Tracker {
          * the browser would refuse to run the script and tracking would stop.
          * A silent break in exchange for better diagnostics is a bad trade.
          */
-        $crossorigin = ($cdn_url === VISITORPING_DEFAULT_CDN_URL) ? ' crossorigin="anonymous"' : '';
+        $use_crossorigin = ($cdn_url === VISITORPING_DEFAULT_CDN_URL);
 
         echo "\n<!-- VisitorPing Website Doorbell Tracker -->\n";
-        echo '<script defer' . $crossorigin . ' src="' . $tracker_url . '"></script>' . "\n";
+        echo '<script defer';
+        if ($use_crossorigin) {
+            echo ' crossorigin="anonymous"';
+        }
+        echo ' src="' . esc_url($tracker_url) . '"></script>' . "\n";
         echo "<!-- /VisitorPing -->\n\n";
     }
 }

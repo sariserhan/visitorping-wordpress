@@ -3,7 +3,7 @@
  * Plugin Name:       VisitorPing — Real-Time Website Visitor Alerts
  * Plugin URI:        https://visitorping.com
  * Description:       A doorbell for your website. Real-time website visitor notifications and intelligence delivered to your mobile phone.
- * Version:           1.3.1
+ * Version:           1.3.2
  * Requires at least: 5.6
  * Requires PHP:      7.4
  * Author:            VisitorPing
@@ -11,14 +11,13 @@
  * License:           MIT
  * License URI:       https://opensource.org/licenses/MIT
  * Text Domain:       visitorping
- * Domain Path:       /languages
  */
 
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-define('VISITORPING_VERSION', '1.3.1');
+define('VISITORPING_VERSION', '1.3.2');
 define('VISITORPING_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('VISITORPING_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('VISITORPING_DEFAULT_CDN_URL', 'https://cdn.visitorping.com/site');

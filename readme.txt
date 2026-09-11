@@ -2,9 +2,9 @@
 Contributors: visitorping
 Tags: analytics, visitor notifications, realtime visitors, visitor radar, live analytics
 Requires at least: 5.6
-Tested up to: 6.7
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -62,6 +62,11 @@ Configure any consent controls your website needs before enabling tracking. Deve
 Deactivate the plugin to stop it injecting the tracker, then clear page/CDN caches. Deleting it removes its local settings. Previously created posts and data stored in the VisitorPing service are not deleted by uninstalling the plugin; manage them separately in WordPress and VisitorPing.
 
 == Changelog ==
+
+= 1.3.2 =
+* Escape the tracking script URL at output and add translator context.
+* Clarify that script reachability does not verify a recorded visit.
+* Verify activation, tracking exclusions, consent suppression, and publishing authorization on WordPress 7.1.
 
 = 1.3.1 =
 * Clarify hosted-service pricing and data handling.

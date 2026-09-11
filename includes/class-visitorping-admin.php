@@ -221,8 +221,9 @@ class VisitorPing_Admin {
 
         $code = wp_remote_retrieve_response_code($response);
         if ($code >= 200 && $code < 400) {
-            wp_send_json_success(array('message' => __('Success! The VisitorPing tracking script is reachable and configured properly.', 'visitorping')));
+            wp_send_json_success(array('message' => __('The tracking script is reachable. Confirm a test visit in your VisitorPing dashboard.', 'visitorping')));
         } else {
+            /* translators: %d: HTTP response status code from the tracking script request. */
             wp_send_json_error(array('message' => sprintf(__('CDN script returned status code %d', 'visitorping'), $code)));
         }
     }
